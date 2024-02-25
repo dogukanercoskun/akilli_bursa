@@ -20,11 +20,11 @@ function TimeLine({type}) {
       setDatas(data.currentValue);
       setLoading(false); 
     } else {
-      dispatch(getDataFirestore()).then(() => {  setDatas(data.plannedValue); setLoading(false)}) 
+      dispatch(getDataFirestore()).then(() => {setDatas(data.plannedValue); setLoading(false)}) 
       .catch(() => setLoading(false)); 
 
     }
-  }, [type, data.currentValue, dispatch]);
+  }, [type, data.currentValue, data.plannedValue, dispatch]);
 
   useEffect(() => {
     if (type === "PlannedEvent") {
@@ -56,34 +56,6 @@ function TimeLine({type}) {
     </div>
 );
 
- 
-  
-
-  /*return (
-    <div className="row">
-      <div className="col">
-        
-          {datas.length > 0  ? (
-           datas.map((item)=>{
-
-            if (type!="PlannedEvent") {
-              return <Post key={item.id} data={item.data}  />
-            } else {
-              return <PlannedPost key={item.id} data={item.data} id={item.id}  />
-            }
-
-            
-                      
-           })
-            
-          ) : (
-            <div>Timeline da<LoadingPage /> </div>
-            
-          )}
-     
-      </div>
-    </div>
-  );*/
 }
 
 export default TimeLine;

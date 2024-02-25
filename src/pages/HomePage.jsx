@@ -11,11 +11,8 @@ function HomePage() {
     <div className="row">
     <div className="col">
       <div className="main">
-        <div className="header">
-          <h1>Oylama Sonuçları</h1>
-        </div>
+      <FollowUp/>
     </div>
-    <FollowUp/>
     </div>
   </div>
    

@@ -14,6 +14,7 @@ import RequestForm from './pages/RequestForm';
 import Database from './pages/datebase_add_remove/Database';
 import PlannedEvent from './pages/PlannedEvent';
 import CurrentEvent from './pages/CurrentEvent';
+import FollowUp from "./components/culture/FollowUp"
 
 
 
@@ -82,6 +83,7 @@ function App() {
           <Route path="/Form" element={user.user != null ? <RequestForm /> : <Auth />} />
           <Route path="/PlannedEvent" element={user.user != null ? <PlannedEvent/> : <Auth />} />
           <Route path="/CurrentEvent" element={user.user != null ? <CurrentEvent/> : <Auth />} />
+          <Route path="/FollowUp" element={user.user != null ? <FollowUp/> : <Auth />} />
           <Route path="/Database" element={user.user != null && user.user.email=='bursasosyal@bursa.com' ? <Database /> : <Auth />} />
         </Routes>
         </div>

@@ -20,10 +20,7 @@ const hanleAcitve=()=>{
     <>
   <div className="auth-container">
       <div className="auth__left">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Laudantium voluptate aspernatur reiciendis magni eaque ex non hic,
-           enim eum, quis aliquam veniam aliquid perspiciatis sit 
-           maxime architecto. Vero, ab! Eligendi?</p>
+        <p>Code 16 Programı İleri Seviye React Kursu Çerçevesinde Bursa Akkılı Şehir Teması ile Yaptığım Bitirme Projem @Doğukan Ercokun  </p>
       </div>
       <div className="auth__right">
 

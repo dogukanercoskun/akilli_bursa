@@ -28,7 +28,7 @@ const handleLogin= async()=>{
 
   return (
     <div className="login">
-        <img src="../../../public/Bursa Büyükşehir Belediyesi.png" alt="" />
+        <img src="/src/assets/Bursa Büyükşehir Belediyesi.png" alt="" />
         <input value={email} onChange={(e)=>setEamil(e.target.value)} type="email" placeholder=" Email" name="email" id="email" />
         <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password" placeholder="Şifre" name="password" id="password" />
         <div className="buttonGroup">

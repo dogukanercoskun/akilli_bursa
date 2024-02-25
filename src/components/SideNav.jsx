@@ -41,7 +41,8 @@ function SideNav() {
       </button>
       <button className="sideNav__button">
         <BsNewspaper className="side__button__icon" />
-        <span className="sideNav__button__text">Oylama Sonçları</span>
+      
+        <Link className="link" to="/FollowUp"><span className="sideNav__button__text">Oylama Sonçları</span></Link>
       </button>
 
       {user.user != null && user.user.email=='bursasosyal@bursa.com' ?(

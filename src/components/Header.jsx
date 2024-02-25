@@ -24,7 +24,7 @@ function Header() {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="../..//public/Bursa Büyükşehir Belediyesi.png" alt="" />
+          <img src="/src/assets/Bursa Büyükşehir Belediyesi.png" alt="" />
           SOSYAL BURSA
         </a>
         <div className="username">

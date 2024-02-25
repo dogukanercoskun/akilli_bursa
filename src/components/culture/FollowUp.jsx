@@ -1,58 +1,52 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import LoadingPage from '../../pages/LoadingPage';
-
-
+import LoadingPage from "../../pages/LoadingPage";
+import "../../style/Followup.css";
 
 function FollowUp() {
-  const [datas,setDatas]=useState([])
+  const [datas, setDatas] = useState([]);
   const data = useSelector((state) => state.data);
 
-
-  useEffect(() =>{
-    setDatas(data.PlannedVoteValue)
-
-  },[data])
-
-
+  useEffect(() => {
+    setDatas(data.PlannedVoteValue);
+  }, [data]);
 
   return (
-    <>
-<table className="table">
-  <thead>
-    <tr>
-      <th scope="col">Etkinliğin</th>
-      <th scope="col">Adı</th>
-      <th scope="col">Açıklaması</th>
-      <th scope="col">Türü</th>
-      <th scope="col">Beğeni Sayısı</th>
-      <th scope="col">Beğenmeyen Sayısı</th>
-    </tr>
-  </thead>
-  <tbody>
-  {datas.length > 0 ? (
-  datas.map((item, index) => (
-    
-    <tr key={index}>
-      <th scope="row">{index + 1}</th>
-      <td>{item.Adi}</td>
-      <td>{item.KisaAciklama}</td>
-      <td>{item.Tur}</td>
-      <td>{item.LikeSayısı}</td>
-      <td>{item.DislikeSayısı}</td>
-    </tr>
-  ))
-) : (
-  <tr>
-    <td colSpan="6"><LoadingPage /></td>
-  </tr>
-)}
-   
-  </tbody>
-</table>
-
-    </>
-  )
+    <div className="container">
+      <h1>Oylama Sonuçları</h1>
+      {datas.length > 0 ? (
+        <table className="table table-striped table-warning table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Etkinliğin Adı</th>
+              <th scope="col">Etkinliğin Türü</th>
+              <th scope="col">Açıklama</th>
+              <th scope="col">Olumlu Görüş</th>
+              <th scope="col">Olumsuz Görüş</th>
+            </tr>
+          </thead>
+          <tbody>
+            {datas.map((item) => {
+              return item.data.map((value) => {
+                return (
+                  <tr key={value.Id}>
+                    <td>{value.Adi}</td>
+                    <td>{value.Tur}</td>
+                    <td>{value.KisaAciklama}</td>
+                    <td>{value.LikeSayısı}</td>
+                    <td>{value.DislikeSayısı}</td>
+                  </tr>
+                );
+              });
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <LoadingPage />
+      )}
+    </div>
+  );
+  
 }
 
-export default FollowUp
+export default FollowUp;
