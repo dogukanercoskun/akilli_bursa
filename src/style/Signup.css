@@ -1,0 +1,42 @@
+.signup{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    padding: 2.5rem;
+    margin-left:1.8rem ;
+    margin-right: 1.8rem;
+
+}
+
+.signup>img{
+    width: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2rem;
+}
+
+.signup>input{
+    background:rgba(0, 0, 0, 0.5);
+    border: 2px solid grey;
+    border-radius: 3px;
+    padding:0.5rem ;
+    margin-bottom: 1rem;
+    color:white
+}
+
+.signup>input:focus{
+    outline: 1px solid grey;
+}
+
+.signup>button{
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 0;
+    color: white;
+    background:rgba(10, 97, 148, 0.744);
+    font-weight: bolder;
+}
+
+.signup>button:hover{
+    cursor: pointer;
+}

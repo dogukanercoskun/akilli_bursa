@@ -1,0 +1,60 @@
+.login{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid grey;
+    padding: 2.5rem;
+    margin-left:1.8rem ;
+    margin-right: 1.8rem;
+
+}
+
+.login>img{
+    width: 7rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+}
+
+.login>input{
+    background:rgba(0, 0, 0, 0.5);
+    border: 2px solid grey;
+    border-radius: 3px;
+    padding:0.5rem ;
+    margin-bottom: 1rem;
+    color:white
+}
+
+.login>input:focus{
+    outline: 1px solid grey;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-direction: column;
+   
+}
+.googleSign{
+    margin-top: 0.5rem;
+    background-color:rgba(18, 189, 215, 0.744);
+  
+}
+
+.Signin{
+background:rgba(10, 148, 109, 0.744);
+padding: 0.5rem;
+}
+.buttonGroup>button{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border: 0;
+    color: white;
+    font-weight: bolder;
+}
+
+
+.buttonGroup>button:hover{
+    cursor: pointer;
+}
+

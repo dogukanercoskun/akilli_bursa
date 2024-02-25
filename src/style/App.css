@@ -1,0 +1,21 @@
+.app{
+display: flex;
+flex-wrap: wrap;
+
+}
+
+ 
+.app > * {
+    flex: 1 1 calc(33.33% - 10px); /* 3 bileşen için 33.33% genişlik ayarlayın */
+    margin: 5px; /* Bileşenler arasında biraz boşluk bırakın */
+  }
+
+
+  @media (max-width: 520px){
+   
+    
+    .app > *{
+        flex: 0 0 calc(50% - 200px); /* 520 pikselden daha geniş ekranlarda diğer bileşenlerin genişliğini yarısına ayarla */
+        margin-top: 0; /* Geniş ekranlarda boşluk bırakma */
+      }
+  }

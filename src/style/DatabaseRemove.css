@@ -1,0 +1,100 @@
+.databaseRemove{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border:2px solid grey;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5rem;
+    margin: 2rem;
+}
+
+
+
+.databaseRemove>button{
+    background: rgba(248, 137, 124, 0.832);
+    margin-top: 5rem;
+    border: none;
+    font-weight: bolder;
+    font-size: medium;
+    color: white;
+    padding: 0.5rem;
+    width:10rem;
+    border-radius: 8px;
+}
+
+.databaseRemove>button:hover{
+    cursor: pointer;
+}
+
+
+
+.checkGroup{
+   border: 1px solid grey;
+   border-radius: 5px;
+   padding:0.3rem ;
+   margin-top: 5px;
+ }
+ .checkGroup>input{
+     margin-left: 1rem;
+     background:rgba(0, 0, 0, 0.5);
+ }
+ .checkGroup>label{
+     margin-left: 0.5rem;
+     
+ }
+
+ @media (max-width:900px){
+    .checkGroup{
+       
+        flex-direction: column;
+    }
+    .checkGroup>input{
+        margin-left: 3rem;
+       
+    }
+    .checkGroup>label{
+        margin-left: 0.1rem;
+        
+    }
+ }
+
+
+ @media (max-width:790px){
+    .databaseRemove{
+        
+        margin-left: 9rem;
+    }
+    
+    .checkGroup{
+       
+        flex-direction: column;
+    }
+
+    .checkGroup>input{
+        margin-left: 0.5rem;
+       
+    }
+    .checkGroup>label{
+    
+        font-size: medium;
+        margin-left: 1.5rem;
+        
+    }
+ }
+
+ @media (max-width:560px){
+    .checkGroup>input{
+        margin-left: 3rem;;
+       
+    }
+    .checkGroup>label{
+        margin-right: 1rem;
+        font-size: large;
+        margin-left: 0.3rem;
+        
+    }
+ }
+

@@ -1,0 +1,102 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 1rem;
+    border:2px solid grey;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    
+}
+
+.mainTopic{
+    font-size: 1.25rem;
+    text-decoration:underline;
+   
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 0.5rem;
+}
+
+.inputGroup>input{
+    background:rgba(84, 79, 79, 0.5);
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding:0.3rem ;
+    margin-bottom: 1rem;
+    color:white
+}
+
+.inputGroup>textarea{
+    background:rgba(84, 79, 79, 0.5);
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding:0.5rem ;
+    margin-bottom: 1rem;
+    color:white;
+    width:20rem;
+    height:6rem;
+}
+span{
+  margin: 1.5px;
+}
+.checkGroup{
+   border: 1px solid grey;
+  border-radius: 5px;
+  padding:0.3rem ;
+}
+.checkGroup>input{
+    margin-left: 1rem;
+    background:rgba(0, 0, 0, 0.5);
+}
+.checkGroup>label{
+    margin-left: 0.5rem;
+    
+}
+
+.button{
+    background: rgba(78, 220, 230, 0.832);
+    margin-top: 9px;
+    border: none;
+    font-weight: bolder;
+    font-size: medium;
+    color: white;
+    padding: 0.5rem;
+    width:10rem;
+    border-radius: 8px;
+    
+}
+
+
+@media (max-width: 790px){
+    .mainTopic{
+        font-size: 1rem;
+        text-decoration:underline;
+       
+    }
+
+    .inputGroup>textarea{
+        
+        width:15rem;
+        height:6rem;
+    }
+
+    .checkGroup>input{
+       
+        margin-left: 2rem;
+        flex-direction: column;
+    }
+}
+@media (max-width: 520px){
+    .form{
+        margin-left: 5rem;
+    }
+}
