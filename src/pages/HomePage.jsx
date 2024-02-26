@@ -1,6 +1,6 @@
 
 import FollowUp from "../components/culture/FollowUp"
-import "../style/HomePage.css"
+
 
 
 

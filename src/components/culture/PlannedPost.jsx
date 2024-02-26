@@ -9,6 +9,7 @@ import LoadingPage from '../../pages/LoadingPage';
 import { BiBook } from "react-icons/bi";
 import { useDispatch } from 'react-redux';
 import { updateDataFirestore } from "../../redux/dataSlice";
+import { addDataFirestore } from '../../redux/addDataSlice';
 
 // eslint-disable-next-line react/prop-types
 function PlannedPost({data,id}) {
@@ -31,11 +32,17 @@ function PlannedPost({data,id}) {
     
     }
 
+    const handleFavotireEvent=(item)=>{
+      const favoriteData={collectionName:'favoriteEvent',data:item}
+      dispacth(addDataFirestore(favoriteData))
+
+    }
+
 
 
     useEffect(()=>{
       setdatas(data.data)
-    },[data,hadleLike,hadleDisLike])
+    },[data,hadleLike,hadleDisLike,handleFavotireEvent])
     
     return (
       <div className="post">
@@ -65,7 +72,7 @@ function PlannedPost({data,id}) {
             <div className="post__icon">
            <BiSolidLike className="icon" onClick={() => hadleLike(item)} />
           <BiSolidDislike className="icon" onClick={() => hadleDisLike(item)} />
-          <MdFavorite className="icon" />
+          <MdFavorite  onClick={() => handleFavotireEvent(item)} className="icon" />
             
               
               

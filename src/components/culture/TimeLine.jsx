@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useDispatch, useSelector } from "react-redux";
-import "../../style/TimeLine.css";
+
 import Post from "./Post";
 import LoadingPage from "../../pages/LoadingPage";
 import { useEffect, useState } from "react";
@@ -45,7 +45,9 @@ function TimeLine({type}) {
                 <LoadingPage />
             ) : (
                 datas.map((item) => {
+                
                     return type !== "PlannedEvent" ? (
+                      
                         <Post key={item.id} data={item.data} />
                     ) : (
                         <PlannedPost key={item.id} data={item} id={item.id} />

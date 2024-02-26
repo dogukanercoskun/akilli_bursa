@@ -24,8 +24,9 @@ function Header() {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src="/src/assets/Bursa Büyükşehir Belediyesi.png" alt="" />
-          SOSYAL BURSA
+          <img src="https://www.bursa.bel.tr/dosyalar/image/5B.png" alt="Resim Bulunamadı" />
+          <h5 className="navbar-text">SOSYAL BURSA</h5>
+          
         </a>
         <div className="username">
           {user ? `Hoşgeldin ${user.email}` : null}

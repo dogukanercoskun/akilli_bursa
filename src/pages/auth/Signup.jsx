@@ -15,7 +15,7 @@ const handeleSingnup=async ()=>{
 }
   return (
     <div className="signup">
-        <img src="../../../public/Bursa Büyükşehir Belediyesi.png" alt="" />
+       <img src="https://www.bursa.bel.tr/dosyalar/image/5B.png" alt="Resim Bulunamadı" />
         <input value={email} onChange={(e)=>setEamil(e.target.value)} type="email" placeholder=" Email" name="email" id="email" />
         <input value={password} onChange={(e)=>{setPassword(e.target.value)}}  type="password" placeholder="Şifre" name="password" id="password" />
         <button onClick={handeleSingnup}>Üye ol</button>

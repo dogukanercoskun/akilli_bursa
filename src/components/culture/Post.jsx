@@ -10,7 +10,7 @@ function Post({ data }) {
   const [datas,setdatas]=useState([])
 
   useEffect(()=>{
-  
+
     setdatas(data)
   },[data])
   
@@ -20,6 +20,7 @@ function Post({ data }) {
       datas.length > 0 ?(
 
         datas.map((item,index)=>{
+          
           return(
           <div key={index} className="post-container">
           <div className="post__header">
@@ -42,7 +43,7 @@ function Post({ data }) {
           </div>)
         })
       ):
-      (<LoadingPage/>)}
+      (  <LoadingPage />)}
       
     </div>
   );

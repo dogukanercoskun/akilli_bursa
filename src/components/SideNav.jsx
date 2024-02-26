@@ -4,8 +4,9 @@ import { BsCalendarEventFill } from "react-icons/bs";
 import { BsNewspaper } from "react-icons/bs";
 import { FaWpforms } from "react-icons/fa6";
 import { GiTheater } from "react-icons/gi";
-import { MdOutlineCastForEducation } from "react-icons/md";
+import { MdOutlineFavorite } from "react-icons/md";
 import { BsDatabaseAdd } from "react-icons/bs";
+import { FaClipboardList } from "react-icons/fa";
 import {Link} from 'react-router-dom';
 import { useSelector } from "react-redux";
 
@@ -15,7 +16,7 @@ function SideNav() {
 
   return (
     <div className="sideNav">
-    <img className="sideNav__logo" src="../..//public/Bursa Büyükşehir Belediyesi.png" alt="" />
+    <img src="https://www.bursa.bel.tr/dosyalar/image/5B.png" alt="Resim Bulunamadı" />
 
     <div className="sideNav__buttons">
       <button className="sideNav__button">
@@ -36,8 +37,9 @@ function SideNav() {
         <Link className="link" to="/CurrentEvent"> <span className="sideNav__button__text">Güncel Etkinlikler</span></Link>
       </button>
       <button className="sideNav__button">
-        <MdOutlineCastForEducation className="side__button__icon" />
-        <span className="sideNav__button__text">Eğitim Merkezleri</span>
+        <MdOutlineFavorite className="side__button__icon" />
+       
+        <Link className="link" to="/FavoriteEvent"><span className="sideNav__button__text">Favoriler</span></Link>
       </button>
       <button className="sideNav__button">
         <BsNewspaper className="side__button__icon" />
@@ -46,10 +48,18 @@ function SideNav() {
       </button>
 
       {user.user != null && user.user.email=='bursasosyal@bursa.com' ?(
+        <>
       <button className="sideNav__button">
         <BsDatabaseAdd className="side__button__icon" />
         <Link className="link" to="/Database"><span className="sideNav__button__text">Veri Ekleme/Silme</span></Link>
-      </button>) : (null)}
+      </button>
+      <button className="sideNav__button">
+        <FaClipboardList className="side__button__icon" />
+        <Link className="link" to="/RequestList"><span className="sideNav__button__text">Talep Listesi</span></Link>
+      </button>
+      </>
+      
+      ) : (null)}
       
     </div>
     

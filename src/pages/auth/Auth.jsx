@@ -20,7 +20,7 @@ const hanleAcitve=()=>{
     <>
   <div className="auth-container">
       <div className="auth__left">
-        <p>Code 16 Programı İleri Seviye React Kursu Çerçevesinde Bursa Akkılı Şehir Teması ile Yaptığım Bitirme Projem @Doğukan Ercokun  </p>
+        <p>Code 16 Programı İleri Seviye React Kursu Çerçevesinde Bursa Akkılı Şehir Teması ile Yaptığım Bitirme Projem <br />@Doğukan Ercoşkun  </p>
       </div>
       <div className="auth__right">
 

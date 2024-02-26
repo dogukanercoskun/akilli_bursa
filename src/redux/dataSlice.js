@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unused-labels */
 import { createSlice,createAsyncThunk } from '@reduxjs/toolkit'
-import { collection, getDocs,getDoc,updateDoc,query,onSnapshot } from 'firebase/firestore';
+import { collection, getDocs,getDoc,updateDoc,query,deleteDoc } from 'firebase/firestore';
 import { db } from "../config/firebase"
 import { doc } from 'firebase/firestore';
 
@@ -95,10 +95,28 @@ export const updateDataFirestore=createAsyncThunk(
   }
 );
 
+export const deleteDataFirestore=createAsyncThunk(
+  'deleteData/deleteDataFirestore',
+  async (id) => {
+    const collectionName = 'favoriteEvent'
+    const deleteDataCollectionRef=doc(db, collectionName,id)
+
+    try {
+      await deleteDoc(deleteDataCollectionRef);
+    } catch (error) {
+      console.error('Veri silme hatası:', error);
+      throw error;
+    }
+  }
+)
+
 const initialState = {
   currentValue: [],
   plannedValue: [],
   PlannedVoteValue:[],
+  favoriteValue:[],
+  requestList: [],
+  
 }
 
 export const dataSlice = createSlice({
@@ -109,10 +127,14 @@ export const dataSlice = createSlice({
      
       state.currentValue=action.payload
     },
-    PlannedData:(state,action) => {
-
+    plannedData:(state,action) => {
       state.PlannedVoteValue=action.payload
-    }
+    },favoriteData:(state,action) => {
+      state.favoriteValue=action.payload
+    },requestListData:(state,action) => {
+      state.requestList=action.payload
+    },
+    
   },
   extraReducers: (builder)=> {
     builder.addCase(getDataFirestore.fulfilled,(state,action)=>{
@@ -121,10 +143,13 @@ export const dataSlice = createSlice({
     .addCase(updateDataFirestore.fulfilled,(state,action)=>{
       state.plannedValue= action.payload
     })
+    .addCase(deleteDataFirestore.fulfilled,()=>{
+     
+    })
    },
 })
 
 // Action creators are generated for each case reducer function
-export const { getData,PlannedData} = dataSlice.actions
+export const { getData,plannedData,favoriteData,requestListData} = dataSlice.actions
 
 export default dataSlice.reducer

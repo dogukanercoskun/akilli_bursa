@@ -1,8 +1,12 @@
 
 img{
     width: 2.5rem;
+    margin-right: 5px;
 }
 
+.navbar-text{
+    margin-left: 1 rem;
+}
 .username{
     color: white;
     font-size: small;
@@ -17,4 +21,14 @@ img{
 
 .exitIcon>span{
     padding: 0.5rem;
+}
+
+.navbar-brand{
+  display: flex;
+   justify-content: space-between;
+   align-items: center;
+   flex-direction: row;
+   height: 1.7rem;
+   padding: 0.5rem;
+  
 }

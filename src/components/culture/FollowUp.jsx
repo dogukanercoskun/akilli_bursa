@@ -12,8 +12,13 @@ function FollowUp() {
   }, [data]);
 
   return (
-    <div className="container">
+    <div className="row">
+    <div className="col">
+    <div className="header">
       <h1>Oylama Sonuçları</h1>
+      </div>
+    <div className="container">
+     
       {datas.length > 0 ? (
         <table className="table table-striped table-warning table-hover">
           <thead>
@@ -44,6 +49,8 @@ function FollowUp() {
       ) : (
         <LoadingPage />
       )}
+    </div>
+    </div>
     </div>
   );
   

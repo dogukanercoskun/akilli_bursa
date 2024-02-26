@@ -14,13 +14,12 @@ function RequestForm() {
   const handleSubmit=  (e)=>{
 
     const userData = {collectionName:'requestForm',data:data}
-     const response =dispacth(addDataFirestore(userData))
+     dispacth(addDataFirestore(userData)).then(()=>{
+      toast("Form başarıyla gönderildi!");
+     });
     e.preventDefault()
 
-    if (response.requestId) {
-      toast("Form başarıyla gönderildi!");
-     
-    }
+   
      
 
   }
@@ -31,8 +30,9 @@ function RequestForm() {
 
   return (
     <>
+   
       <div className="form" >
-        <span className="mainTopic">TALEP FORMU</span>
+      <span className="mainTopic">TALEP FORMU</span>
         
         <div className="inputGroup">
           <span>Gönderenin Adı Soyadı: </span>
