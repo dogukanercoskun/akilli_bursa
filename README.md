@@ -11,7 +11,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-Hosting :https://akilli-bursa-bbbldys.web.app/   hosting hizmeti ile ilgili bir sorun var düzelteceğim.
+Hosting :https://akilli-bursa-bbbldys.web.app/   
 
 email:bursasosyal@bursa.com
 şifre: 123456
