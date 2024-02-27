@@ -10,11 +10,14 @@ import { BiBook } from "react-icons/bi";
 import { useDispatch } from 'react-redux';
 import { updateDataFirestore } from "../../redux/dataSlice";
 import { addDataFirestore } from '../../redux/addDataSlice';
+import { useSelector } from 'react-redux';
 
 // eslint-disable-next-line react/prop-types
 function PlannedPost({data,id}) {
     const [datas,setdatas]=useState([])
-    const dispacth=useDispatch()
+    const dispacth=useDispatch();
+    const user = useSelector((state) => state.user.user);
+
 
     const hadleLike=(item)=>{
       const plannedData = {id:id,data:item,type:'Like'}
@@ -33,12 +36,11 @@ function PlannedPost({data,id}) {
     }
 
     const handleFavotireEvent=(item)=>{
-      const favoriteData={collectionName:'favoriteEvent',data:item}
+      const adduserFavoriteData={...item,KullanacıAdi:user.email}
+      const favoriteData={collectionName:'favoriteEvent',data:adduserFavoriteData}
       dispacth(addDataFirestore(favoriteData))
 
     }
-
-
 
     useEffect(()=>{
       setdatas(data.data)

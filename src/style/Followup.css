@@ -1,4 +1,4 @@
-.container{
+.cntner{
     border:2px solid grey;
     border-radius: 8px;
     padding: 0.5rem;
@@ -9,6 +9,63 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    margin-right: 1.5rem;
 
 }
 
+@media (max-width: 740px){
+    .cntner{
+        
+        margin-right: 0.3rem;
+    }
+}
+
+@media (max-width: 717px){
+    .cntner{
+        font-size: xx-small;
+        margin-left: 8.2rem;
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    .cntner{
+        font-size: xx-small;
+       margin-right: 0rem;
+       
+    }
+    .table {
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+    }
+  
+  
+  
+  
+    .table td {
+      text-align: left;
+    }
+  
+    .table td:before {
+      content: attr(data-label);
+      font-weight: bold;
+      float: left;
+      text-transform: uppercase;
+    }
+  
+    .table td:last-child:before {
+      content: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .cntner{
+        font-size:xx-small;
+        margin-left: 1rem;
+       
+    }
+  }
+  
+  

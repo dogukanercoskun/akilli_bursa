@@ -17,7 +17,7 @@ function FollowUp() {
     <div className="header">
       <h1>Oylama Sonuçları</h1>
       </div>
-    <div className="container">
+    <div className="cntner">
      
       {datas.length > 0 ? (
         <table className="table table-striped table-warning table-hover">
