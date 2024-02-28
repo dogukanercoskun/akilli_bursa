@@ -35,7 +35,7 @@ function PlannedPost({data,id}) {
     
     }
 
-    const handleFavotireEvent=(item)=>{
+    const handleFavoriteEvent=(item)=>{
       const adduserFavoriteData={...item,KullanacıAdi:user.email}
       const favoriteData={collectionName:'favoriteEvent',data:adduserFavoriteData}
       dispacth(addDataFirestore(favoriteData))
@@ -44,12 +44,12 @@ function PlannedPost({data,id}) {
 
     useEffect(()=>{
       setdatas(data.data)
-    },[data,hadleLike,hadleDisLike,handleFavotireEvent])
+    },[data,hadleLike,hadleDisLike,handleFavoriteEvent])
     
     return (
       <div className="post">
         {
-        datas.length > 0 ?(
+        Array.isArray(datas) && datas.length > 0 ?(
   
           datas.map((item,index)=>{
             return(
@@ -74,7 +74,7 @@ function PlannedPost({data,id}) {
             <div className="post__icon">
            <BiSolidLike className="icon" onClick={() => hadleLike(item)} />
           <BiSolidDislike className="icon" onClick={() => hadleDisLike(item)} />
-          <MdFavorite  onClick={() => handleFavotireEvent(item)} className="icon" />
+          <MdFavorite  onClick={() => handleFavoriteEvent(item)} className="icon" />
             
               
               

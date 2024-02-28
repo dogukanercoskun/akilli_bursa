@@ -89,7 +89,7 @@ export const updateDataFirestore=createAsyncThunk(
     }
 
    
-    const datas={ data: updatedData }
+    const datas=[{ data: updatedData }]
 
     return datas
   }

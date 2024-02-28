@@ -45,7 +45,7 @@ function TimeLine({type}) {
                 <LoadingPage />
             ) : (
                 datas.map((item) => {
-                
+
                     return type !== "PlannedEvent" ? (
                       
                         <Post key={item.id} data={item.data} />
