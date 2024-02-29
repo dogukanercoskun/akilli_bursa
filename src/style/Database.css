@@ -1,0 +1,46 @@
+@media (max-width:790px){
+
+    .database {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dikeyde ortala */
+        justify-content: center; /* Yatayda ortala */
+        text-align: center;
+
+      }
+      
+      .form-check {
+        margin-bottom: 1rem;
+      
+     /* İçeriği yeterince ayırmak için */
+      }
+
+      .input-container {
+        display: inline-block; 
+      
+      }
+   } 
+
+   
+
+
+   @media (max-width:560px){
+    .database {
+        margin-right:7rem ;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dikeyde ortala */
+        justify-content: center; /* Yatayda ortala */
+        text-align: center;
+    }
+
+    .fformCheck{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Dikeyde ortala */
+        justify-content: center; /* Yatayda ortala */
+        text-align: center;
+      
+     /* İçeriği yeterince ayırmak için */
+      }
+   }

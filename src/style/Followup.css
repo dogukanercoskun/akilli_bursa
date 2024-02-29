@@ -13,27 +13,39 @@
 
 }
 
-@media (max-width: 740px){
+@media (max-width: 790px){
     .cntner{
-        
-        margin-right: 0.3rem;
+      font-size: small;
+      width:90%;
+       
     }
+
+    .table {
+      width: 70%;
+      overflow-x: auto;
+      display: block;
+    }
+  
 }
 
-@media (max-width: 717px){
+@media (max-width: 735px){
     .cntner{
-        font-size: xx-small;
-        margin-left: 8.2rem;
+        font-size:  xx-small;;
+        margin-right: 0.3rem;
     }
 
     
 }
 
-@media (max-width: 500px) {
+@media (max-width: 605px) {
     .cntner{
         font-size: xx-small;
-       margin-right: 0rem;
-       
+     width: 65%;
+      height: auto; 
+    float: left; 
+   padding: 4rem;
+    
+
     }
     .table {
       width: 100%;
@@ -60,10 +72,10 @@
     }
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 520px) {
     .cntner{
         font-size:xx-small;
-        margin-left: 1rem;
+        margin-left: 3rem;
        
     }
   }

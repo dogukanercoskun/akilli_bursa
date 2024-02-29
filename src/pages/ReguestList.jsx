@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import LoadingPage from './LoadingPage';
+import '../style/RequestList.css'
 
 
 function ReguestList() {
@@ -19,7 +20,7 @@ useEffect(() => {
     <div className="header">
       <h1>Talep Listesi</h1>
       </div>
-    <div className="container">
+    <div className="cntner">
      
       {datas.length > 0 ? (
         <table className="table table-striped table-warning table-hover">

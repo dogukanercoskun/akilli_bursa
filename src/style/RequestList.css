@@ -1,0 +1,21 @@
+.cntner{
+    border:2px solid grey;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+
+}
+
+@media (max-width: 790px){
+    .cntner{
+     
+    margin-left:4rem;
+    }
+}

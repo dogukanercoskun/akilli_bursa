@@ -1,6 +1,7 @@
 import { useState } from "react";
 import DatabaseAdd from "./DatabaseAdd";
 import DatabaseRemove from "./DatabaseRemove";
+import '../../style/Database.css'
 
 function Database() {
     const [datebaseChange,setDatebaseChange]=useState(true)
@@ -12,6 +13,8 @@ function Database() {
 
   return (
     <div className="database">
+    
+      <div className="input-container"> 
       <div className="form-check form-switch form-check-reverse">
         <input
           className="form-check-input"
@@ -24,6 +27,8 @@ function Database() {
 
       {datebaseChange ? <DatabaseAdd /> : <DatabaseRemove />}
     </div>
+    </div>
+   
   )
 }
 

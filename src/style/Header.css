@@ -32,3 +32,16 @@ img{
    padding: 0.5rem;
   
 }
+
+@media (max-width:518px){
+   
+    .exitIcon{
+      margin-top: 0.5rem;
+        
+    } 
+
+    .navbar-text{
+        margin-top: 0.5rem;
+    }
+
+}

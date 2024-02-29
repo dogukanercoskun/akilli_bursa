@@ -8,7 +8,7 @@
     border-radius: 8px;
     background: rgba(0, 0, 0, 0.5);
     padding: 5rem;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 
@@ -46,11 +46,16 @@
      
  }
 
- @media (max-width:900px){
-    .checkGroup{
-       
-        flex-direction: column;
+ @media (max-width:950px){
+  
+
+    .databaseRemove{
+        
+        font-size: medium;
+        padding: 0.5rem;
+        margin: 2rem;
     }
+   
     .checkGroup>input{
         margin-left: 3rem;
        
@@ -63,38 +68,45 @@
 
 
  @media (max-width:790px){
+
     .databaseRemove{
-        
-        margin-left: 9rem;
-    }
-    
-    .checkGroup{
-       
-        flex-direction: column;
-    }
-
-    .checkGroup>input{
-        margin-left: 0.5rem;
-       
-    }
-    .checkGroup>label{
-    
+       width: 20rem;
         font-size: medium;
-        margin-left: 1.5rem;
-        
     }
- }
 
- @media (max-width:560px){
-    .checkGroup>input{
-        margin-left: 3rem;;
+    .checkGroup {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        padding: 2rem;
+    }
+
+
+
+    .checkGroup>label {
+        margin-left: 0; /* Label'ları sola hizala */
+    }
+
+}
+ 
+
+
+ 
+@media (max-width:560px){
+    .databaseRemove{
+        width: 15rem;
+        margin-left:4rem;
+
        
     }
-    .checkGroup>label{
-        margin-right: 1rem;
-        font-size: large;
-        margin-left: 0.3rem;
-        
-    }
- }
 
+    .input-container {
+        flex-direction: column; /* İçeriği sütun olarak düzenle */
+        align-items: center; /* Dikeyde ortala */
+      }
+
+      .form-check {
+        margin-bottom: rem; /* İçerikler arasına boşluk bırak */
+      }
+    
+ }

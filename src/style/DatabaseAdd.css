@@ -8,7 +8,6 @@
     border-radius: 8px;
     padding: 0.5rem;
     background: rgba(0, 0, 0, 0.5);
-    padding: 5rem;
     margin: 2rem;
 }
 
@@ -54,55 +53,57 @@
      
  }
 
-
  @media (max-width:900px){
-    .checkGroup{
-       
-        flex-direction: column;
+
+    .databaseAdd{
+        font-size: smaller;
+        padding: 0.5rem;
+        margin: 2rem;
     }
-    .checkGroup>input{
-        margin-left: 3rem;
-       
-    }
-    .checkGroup>label{
-        margin-left: 0.1rem;
-        
-    }
+
+
  }
+
 
 
  @media (max-width:790px){
     .databaseAdd{
-        
-        margin-left: 9rem;
-    }
-    
-    .checkGroup{
-       
-        flex-direction: column;
-    }
-
-    .checkGroup>input{
-        margin-left: 0.5rem;
-       
-    }
-    .checkGroup>label{
-    
         font-size: medium;
-        margin-left: 1.5rem;
-        
+        margin-left: 0;
     }
- }
 
- @media (max-width:560px){
-    .checkGroup>input{
-        margin-left: 3rem;;
+    .databaseAdd>button{
+        font-weight: bold;
+        font-size: medium;
+      
+     
        
     }
-    .checkGroup>label{
-        margin-right: 1rem;
-        font-size: large;
-        margin-left: 0.3rem;
-        
+    .inputFile{
+        padding:0.1rem ;
+        margin-top: 1rem;
+
     }
+
+    .checkGroup>label {
+        margin-left: 0; /* Label'ları sola hizala */
+    }
+
+}
+ 
+
+
+ 
+@media (max-width:560px){
+    .databaseAdd{
+        margin-left: 4rem;
+        width: 15rem;
+       
+    }
+
+    .inputFile{
+        width: 12rem;
+
+    }
+    
  }
